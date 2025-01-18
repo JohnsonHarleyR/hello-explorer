@@ -1,4 +1,75 @@
-/* Add screen styles below */
-a.active {
-    font-weight: bold;
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+:root {
+    --bg-color: #353535;
+    --font-color: #fbfbfb;
+    --main-font: Arial, "Gills Sans", Georgia, Helvetica, sans-serif;
+    --earth-size: 400px;
+    --moon-size: 100px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+}
+
+body * {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .8s;
+}
+
+main {
+    margin: 20px;
+    margin-bottom: 60px;
+    padding: 10px;
+    width: 600px;
+}
+
+h1 {
+    font-family: var(--main-font);
+    font-size: 45px;
+}
+
+main p {
+    font-family: var(--main-font);
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+#earth-moon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#earth {
+    width: var(--earth-size);
+    height: var(--earth-size);
+}
+
+#moon {
+    width: var(--moon-size);
+    height: var(--moon-size);
+}
+
+.celestial-body {
+    border-radius: 50%;
+}
+
+.active {
+    border: 10px solid var(--font-color);
 }
